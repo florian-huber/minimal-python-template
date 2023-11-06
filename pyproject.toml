@@ -2,9 +2,10 @@
 line-length = 120
 include = '\.pyi?$'
 exclude = '''
-/(
+(
     \.eggs
-)/
+    | /{{cookiecutter.directory_name}}/tests
+)
 '''
 
 [tool.isort]
