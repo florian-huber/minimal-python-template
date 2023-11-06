@@ -34,7 +34,7 @@ jobs:
         run: black --check .
       - name: Run isort (check import sorting)
         run: isort --check-only .
-      - name: Change to the generated package directory
-        run: cd my_python_lib
+      - name: Install the package
+        run: pip install -e .
       - name: Run Pylint
         run: pylint my_python_lib
