@@ -34,11 +34,7 @@ jobs:
         run: black --check .
       - name: Run isort (check import sorting)
         run: isort --check-only .
+      - name: Change to the generated package directory
+        run: cd my_python_lib
       - name: Run Pylint
-        run: |
-          # Assuming that your template creates a Python package named "my_python_lib"
-          pylint my_python_lib
-      - name: Run tests
-        run: |
-          # Add commands to run your tests here
-          # e.g., pytest tests/
+        run: pylint my_python_lib
