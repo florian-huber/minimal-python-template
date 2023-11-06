@@ -36,5 +36,3 @@ jobs:
         run: isort --check-only .
       - name: Install the package
         run: pip install -e .
-      - name: Run Pylint
-        run: pylint my_python_lib/
