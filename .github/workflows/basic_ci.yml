@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: [3.8, 3.9, 3.10, 3.11]
+        python-version: [3.8, 3.9, 3.10]
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
@@ -46,10 +46,3 @@ jobs:
         run: |
           # Add commands to run your tests here
           # e.g., pytest tests/
-
-      - name: Archive production artifacts
-        if: success()
-        uses: actions/upload-artifact@v2
-        with:
-          name: my_python_lib-package-${{ matrix.python-version }}-${{ matrix.os }}
-          path: dist/*
