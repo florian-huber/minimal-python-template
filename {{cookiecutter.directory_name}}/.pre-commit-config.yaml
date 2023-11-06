@@ -7,8 +7,8 @@ repos:
     rev: 5.8.0
     hooks:
       - id: isort
-  - repo: https://github.com/pycqa/pylint
-    rev: pylint-2.7.2
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.1.4
     hooks:
-      - id: pylint
-        additional_dependencies: [toml]
+      - id: ruff

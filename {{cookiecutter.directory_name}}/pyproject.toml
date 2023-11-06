@@ -9,9 +9,9 @@ exclude = '''
 
 [tool.isort]
 profile = "black"
-known_first_party = {{ cookiecutter.package_name }}
-src_paths = {{ cookiecutter.package_name }},tests
-line_length = {{ cookiecutter.line_length }}
+known_first_party = "{{ cookiecutter.package_name }}"
+src_paths = ["{{ cookiecutter.package_name }}", "tests"]
+line_length = "{{ cookiecutter.line_length }}"
 
 [tool.pylint]  # If you opt to use pylint
 # Pylint configuration options
