@@ -5,6 +5,7 @@ exclude = '''
 (
     \.eggs
     | /{{cookiecutter.directory_name}}/tests
+    | /hooks
 )
 '''
 
