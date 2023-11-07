@@ -21,11 +21,11 @@ You should get a project folder with the following structure in it:
 
 ```text
 my-python-project/
-├── CODE_OF_CONDUCT.md
 ├── .github
 │   └── workflows
 │       ├── basic_ci.yml
 ├── .gitignore
+├── CODE_OF_CONDUCT.md
 ├── LICENSE
 ├── my_python_package
 │   ├── __init__.py
