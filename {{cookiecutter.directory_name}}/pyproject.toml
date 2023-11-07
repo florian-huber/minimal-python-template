@@ -1,3 +1,57 @@
+# see documentation, e.g.
+# - https://packaging.python.org/en/latest/specifications/declaring-project-metadata/#declaring-project-metadata
+# - https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+# - https://www.python.org/dev/peps/pep-0621/
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [
+    { name = "{{ cookiecutter.full_name }}", email = "{{ cookiecutter.email }}" }
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "{{ {'Apache Software License 2.0': 'License :: OSI Approved :: Apache Software License',
+        'MIT license': 'License :: OSI Approved :: MIT License',
+        'BSD license': 'License :: OSI Approved :: BSD License',
+        'ISC license': 'License :: OSI Approved :: ISC License (ISCL)',
+        'GNU General Public License v3 or later': 'License :: OSI Approved :: GNU General Public License',
+        'Not open source': 'License :: Other/Proprietary License'
+    }[cookiecutter.license] }}",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+description = "{{ cookiecutter.package_short_description }}"
+license = {file = "LICENSE"}
+name = "{{ cookiecutter.package_name }}"
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.8"
+version = "{{ cookiecutter.version }}"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "isort",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+]
+publishing = [
+    "build",
+    "twine",
+    "wheel",
+]
+
 [tool.black]
 line-length = 120
 include = '\.pyi?$'
@@ -16,6 +70,4 @@ line_length = "{{ cookiecutter.line_length }}"
 [tool.pylint]  # If you opt to use pylint
 # Pylint configuration options
 
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+
