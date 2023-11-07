@@ -14,3 +14,26 @@ You need `cookiecutter` installed (e.g. using pip). Then you can create a new re
 ```
 cookiecutter https://github.com/florian-huber/minimal-python-template.git
 ```
+
+## What this will do
+Running this template as described above will generate a Python project folder that gets your new project started properly. I hope.
+You should get a project folder with the following structure in it:
+
+```text
+my-python-project/
+├── CODE_OF_CONDUCT.md
+├── .github
+│   └── workflows
+│       ├── basic_ci.yml
+├── .gitignore
+├── LICENSE
+├── my_python_package
+│   ├── __init__.py
+│   ├── my_module.py
+│   └── __version__.py
+├── pyproject.toml
+├── README.md
+└── tests
+    ├── __init__.py
+    └── test_my_module.py
+```
