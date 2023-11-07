@@ -1,3 +1,7 @@
+![GitHub](https://img.shields.io/github/license/florian-huber/minimal-python-template)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/florian-huber/minimal-python-template/basic_ci.yml)
+
+
 # Minimal Python template
 A minimal Python library cookiecutter template.
 
