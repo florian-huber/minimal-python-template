@@ -1,6 +1,7 @@
 """Tests for the {{ cookiecutter.package_name }}.my_module module.
 """
 import pytest
+
 from {{cookiecutter.package_name}}.my_module import hello
 
 
