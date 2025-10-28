@@ -29,12 +29,13 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install cookiecutter ruff
-      - name: Create project from template
-        run: cookiecutter . --no-input
-      - name: Run Ruff linter
+          pip install -e .[dev]
+      - name: Show pip list
+        run: |
+          pip list
+      - name: Run ruff linter
         run: ruff check --output-format=github
-      - name: Install the package
-        run: pip install -e .
+      - name: Run tests
+        run: pytest
 
 {%- endraw %}
