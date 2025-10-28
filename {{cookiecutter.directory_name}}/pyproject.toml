@@ -78,7 +78,7 @@ docstring-code-format = true
 line-ending = "lf"
 
 [tool.ruff.lint]
-extend-select = ["D", "E", "I"]
+extend-select = ["E", "I"]
 
 [tool.ruff.lint.isort]
 known-first-party = ["{{cookiecutter.directory_name}}"]
