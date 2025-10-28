@@ -12,7 +12,7 @@ def test_hello():
 def test_hello_with_error():
     with pytest.raises(ValueError) as excinfo:
         hello("nobody")
-    assert "Can not say hello to nobody" in str(excinfo.value)
+    assert "Cannot say hello to nobody" in str(excinfo.value)
 
 
 @pytest.fixture
