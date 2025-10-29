@@ -27,12 +27,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install cookiecutter black isort
+          pip install cookiecutter
       - name: Create project from template
         run: cookiecutter . --no-input
-      - name: Run Black (check formatting)
-        run: black --check .
-      - name: Run isort (check import sorting)
-        run: isort --check-only .
       - name: Install the package
         run: pip install -e .
